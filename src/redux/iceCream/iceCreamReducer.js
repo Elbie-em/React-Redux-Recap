@@ -15,7 +15,6 @@ const iceCreamReducer = (state = initialState, action) => {
            alert('Out of Stock')
            return state
          }
-         break;
     default:
      return state
   }

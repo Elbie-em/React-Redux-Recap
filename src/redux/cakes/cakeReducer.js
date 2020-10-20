@@ -14,7 +14,6 @@ const cakeReducer = (state = initialState, action) => {
         alert('No stock Availale');
         return state
       }
-      break;
     default:
       return state
   }
