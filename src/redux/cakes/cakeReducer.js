@@ -12,7 +12,9 @@ const cakeReducer = (state = initialState, action) => {
           numOfCakes : state.numOfCakes - 1}
       }else{
         alert('No stock Availale');
+        return state
       }
+      break;
     default:
       return state
   }
