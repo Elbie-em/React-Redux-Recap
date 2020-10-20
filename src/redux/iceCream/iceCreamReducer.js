@@ -13,9 +13,13 @@ const iceCreamReducer = (state = initialState, action) => {
            }
          }else{
            alert('Out of Stock')
+           return state
          }
+         break;
     default:
      return state
   }
 
 }
+
+export default iceCreamReducer;
