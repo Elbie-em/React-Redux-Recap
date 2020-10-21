@@ -6,7 +6,8 @@ import { fetchUsers } from '../redux'
 const UserContainer = ({userData, fetchUsers }) => {
   useEffect(() => {
     fetchUsers()
-  }, [])
+  },[]);
+
   return userData.loading ? (<h2>LOADING....</h2>) : userData.error ? (<h2>{userData.error}</h2>) :
     (<div>
       <h2>User List</h2>
@@ -14,7 +15,7 @@ const UserContainer = ({userData, fetchUsers }) => {
         {
           userData && 
           userData.users &&
-        userData.users.map(user => <p>{user.name}</p>)
+        userData.users.map(user => <p key={user.id}>{user.name}</p>)
         }
       </div>
     </div>)
